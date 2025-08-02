@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import "./HeroSection.css";
 import { MoveRight, Sparkles, Gamepad2, Sword } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -24,10 +25,20 @@ const HeroSection = () => {
 
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+      {/* Background Video */}
+      <div className="hidden sm:block absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-black/70 z-10"></div>
+        <img
+          src="/elysium-quest.gif"
+          className="absolute inset-0 w-full h-full object-cover gif-reverse"
+          alt=""
+        />
+      </div>
+
       {/* Background Elements */}
       <div
         ref={backgroundRef}
-        className="absolute inset-0 z-0 transition-transform duration-500 ease-out"
+        className="absolute inset-0 z-0 transition-transform duration-500 ease-out sm:z-20"
         style={{ willChange: "transform" }}
       >
         <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-orange-500/5 rounded-full blur-3xl"></div>
@@ -42,7 +53,7 @@ const HeroSection = () => {
         <Sword className="h-16 w-16 text-orange-500/30" />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-30">
         <div className="flex flex-col items-center">
           <div className="max-w-2xl">
             <div className="flex items-center mb-4">
