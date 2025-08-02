@@ -51,7 +51,7 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-20 px-6 md:px-12 bg-psyco-black-light relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute w-96 h-96 bg-psyco-green-DEFAULT/10 rounded-full blur-3xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute w-96 h-96 bg-orange-500/10 rounded-full blur-3xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
         </div>
 
         {/* Newsletter Section */}
@@ -70,9 +70,9 @@ const Index = () => {
                 <Input
                   type="email"
                   placeholder="Your email address"
-                  className="bg-psyco-black-DEFAULT border-psyco-green-muted/50 flex-grow"
+                  className="bg-psyco-black-DEFAULT border-orange-500/50 flex-grow"
                 />
-                <button className="bg-psyco-green-DEFAULT hover:bg-psyco-green-dark text-white font-medium py-2 px-6 rounded-lg transition-colors">
+                <button className="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-6 rounded-lg transition-colors">
                   Subscribe
                 </button>
               </div>

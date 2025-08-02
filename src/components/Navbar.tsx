@@ -38,7 +38,7 @@ const Navbar = () => {
         <NavLink to="/" className="flex items-center">
           <div className="h-20 w-auto md:h-28 md:w-auto relative">
             <img
-              src="/lovable-uploads/5964f950-36a7-430c-a887-4eea91ad4973.png"
+              src="/lovable-uploads/cc8f63cf-a7a4-45e4-bf9f-d53b4d733d70.png"
               alt="PSK Services Logo"
               className="h-full w-auto object-contain"
             />
@@ -53,8 +53,8 @@ const Navbar = () => {
               to={link.path}
               className={({ isActive }) =>
                 cn(
-                  "text-white hover:text-green-400 transition-colors duration-300 link-hover text-sm font-medium tracking-wide",
-                  isActive && "text-green-500 after:w-full",
+                  "text-white hover:text-orange-400 transition-colors duration-300 link-hover text-sm font-medium tracking-wide",
+                  isActive && "text-orange-500 after:w-full",
                 )
               }
             >
@@ -65,7 +65,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation Toggle */}
         <button
-          className="md:hidden text-white hover:text-green-400 transition-colors"
+          className="md:hidden text-white hover:text-orange-400 transition-colors"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -86,8 +86,8 @@ const Navbar = () => {
               to={link.path}
               className={({ isActive }) =>
                 cn(
-                  "text-white hover:text-green-400 py-2 text-xl transition-colors duration-300",
-                  isActive && "text-green-500",
+                  "text-white hover:text-orange-400 py-2 text-xl transition-colors duration-300",
+                  isActive && "text-orange-500",
                 )
               }
             >
