@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { MoveRight, Sparkles, Speaker, Music } from 'lucide-react';
+import { MoveRight, Sparkles, Gamepad2, Sword } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
@@ -37,10 +37,10 @@ const HeroSection = () => {
       
       {/* Decorative Elements */}
       <div className="absolute top-1/4 left-20 hidden lg:block">
-        <Speaker className="h-12 w-12 text-orange-500/30" />
+        <Gamepad2 className="h-12 w-12 text-orange-500/30" />
       </div>
       <div className="absolute bottom-1/4 right-20 hidden lg:block">
-        <Music className="h-16 w-16 text-orange-500/30" />
+        <Sword className="h-16 w-16 text-orange-500/30" />
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
@@ -49,17 +49,17 @@ const HeroSection = () => {
             <div className="flex items-center mb-4">
               <div className="bg-orange-500/20 text-orange-400 rounded-full px-4 py-1 text-sm font-medium inline-flex items-center">
                 <Sparkles className="h-3.5 w-3.5 mr-1" />
-                Premium Sound & Light Services
+                Epic 3D RPG Adventure
               </div>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-glow mb-6">
-              Elevate Your <span className="text-orange-500">Event</span> Experience
+              Embark on Your <span className="text-orange-500">Epic</span> Journey
             </h1>
             
             <p className="text-xl text-gray-300 mb-8">
-              Professional sound and lighting solutions that bring your event to life. 
-              From concerts to private parties, we deliver exceptional audiovisual experiences.
+              Dive into an immersive 3D RPG world filled with adventure, magic, and endless possibilities. 
+              Create your character, explore vast realms, and become the hero of your own legend.
             </p>
             
             <div className="flex justify-center">
@@ -67,7 +67,7 @@ const HeroSection = () => {
                 href="#newsletter"
                 className="bg-orange-500 hover:bg-orange-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center btn-glow"
               >
-                Sign up for Waitlist
+                Join Beta Waitlist
                 <MoveRight className="ml-2 h-5 w-5" />
               </a>
             </div>

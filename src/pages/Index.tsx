@@ -59,11 +59,11 @@ const Index = () => {
           <div className="max-w-7xl mx-auto">
             <div className="glassmorphism p-8 md:p-12 text-center">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                Stay Updated with Industry Insights
+                Be the First to Experience the Adventure
               </h2>
               <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-                Subscribe to our newsletter to receive the latest articles,
-                tips, and industry news directly in your inbox.
+                Join our exclusive beta waitlist to get early access to the game, exclusive content,
+                and behind-the-scenes development updates directly in your inbox.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
@@ -73,12 +73,12 @@ const Index = () => {
                   className="bg-psyco-black-DEFAULT border-orange-500/50 flex-grow"
                 />
                 <button className="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-6 rounded-lg transition-colors">
-                  Subscribe
+                  Join Beta
                 </button>
               </div>
 
               <p className="text-gray-400 text-sm mt-4">
-                We respect your privacy. Unsubscribe at any time.
+                We respect your privacy. No spam, just epic gaming updates.
               </p>
             </div>
           </div>
