@@ -63,13 +63,13 @@ const HeroSection = () => {
             </p>
             
             <div className="flex justify-center">
-              <Link
-                to="/booking"
+              <a
+                href="#newsletter"
                 className="bg-green-500 hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center btn-glow"
               >
                 Sign up for Waitlist
                 <MoveRight className="ml-2 h-5 w-5" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>

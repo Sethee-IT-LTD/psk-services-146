@@ -55,7 +55,7 @@ const Index = () => {
         </div>
 
         {/* Newsletter Section */}
-        <section className="py-16 px-6 md:px-12 bg-psyco-black-light">
+        <section id="newsletter" className="py-16 px-6 md:px-12 bg-psyco-black-light">
           <div className="max-w-7xl mx-auto">
             <div className="glassmorphism p-8 md:p-12 text-center">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
