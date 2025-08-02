@@ -1,40 +1,39 @@
-
-import React, { useEffect, useRef } from 'react';
-import { MoveRight, Sparkles, Gamepad2, Sword } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useRef } from "react";
+import { MoveRight, Sparkles, Gamepad2, Sword } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const backgroundRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!backgroundRef.current) return;
-      
+
       const x = e.clientX / window.innerWidth;
       const y = e.clientY / window.innerHeight;
-      
+
       backgroundRef.current.style.transform = `translate(${x * -15}px, ${y * -15}px)`;
     };
-    
-    window.addEventListener('mousemove', handleMouseMove);
-    
+
+    window.addEventListener("mousemove", handleMouseMove);
+
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background Elements */}
-      <div 
+      <div
         ref={backgroundRef}
         className="absolute inset-0 z-0 transition-transform duration-500 ease-out"
-        style={{ willChange: 'transform' }}
+        style={{ willChange: "transform" }}
       >
         <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-orange-500/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/3 right-1/4 w-72 h-72 bg-orange-400/5 rounded-full blur-3xl"></div>
       </div>
-      
+
       {/* Decorative Elements */}
       <div className="absolute top-1/4 left-20 hidden lg:block">
         <Gamepad2 className="h-12 w-12 text-orange-500/30" />
@@ -42,7 +41,7 @@ const HeroSection = () => {
       <div className="absolute bottom-1/4 right-20 hidden lg:block">
         <Sword className="h-16 w-16 text-orange-500/30" />
       </div>
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center">
           <div className="max-w-2xl">
@@ -52,16 +51,18 @@ const HeroSection = () => {
                 Epic 3D RPG Adventure
               </div>
             </div>
-            
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-glow mb-6">
-              Embark on Your <span className="text-orange-500">Epic</span> Journey
+              Your Legend <span className="text-orange-500">Carved</span> in
+              Stone.
             </h1>
-            
+
             <p className="text-xl text-gray-300 mb-8">
-              Dive into an immersive 3D RPG world filled with adventure, magic, and endless possibilities. 
-              Create your character, explore vast realms, and become the hero of your own legend.
+              Brave ever-changing dungeons and battle fabled beasts to unearth
+              verifiably rare loot. In a world where every deed is permanent,
+              what will your legend be?
             </p>
-            
+
             <div className="flex justify-center">
               <a
                 href="#newsletter"
