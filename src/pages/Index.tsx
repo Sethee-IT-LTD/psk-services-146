@@ -17,33 +17,6 @@ const Index = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const featuredServices = [
-    {
-      title: "Sound System",
-      description:
-        "Professional sound systems for any size venue, from small gatherings to large festivals.",
-      icon: <Volume2 size={24} />,
-      imageSrc: "/lovable-uploads/708f9e32-840d-46a4-aaa4-75ad2689e16f.png",
-      link: "/services#sound",
-    },
-    {
-      title: "Lighting Equipment",
-      description:
-        "Create the perfect atmosphere with our state-of-the-art lighting equipment and expert setup.",
-      icon: <Lightbulb size={24} />,
-      imageSrc: "/lovable-uploads/becfc2e3-b59f-4f86-afca-b9f6fc7b7c14.png",
-      link: "/services#lighting",
-    },
-    {
-      title: "DJ Services",
-      description:
-        "Experienced DJs to keep your event energized with the perfect music selection.",
-      icon: <Music2 size={24} />,
-      imageSrc: "/lovable-uploads/03e83f18-76a1-4349-a197-dbde03a93343.png",
-      link: "/services#dj",
-    },
-  ];
-
   return (
     <div>
       <HeroSection />
@@ -55,24 +28,28 @@ const Index = () => {
         </div>
 
         {/* Newsletter Section */}
-        <section id="newsletter" className="py-16 px-6 md:px-12 bg-psyco-black-light">
+        <section
+          id="newsletter"
+          className="py-16 px-6 md:px-12 bg-psyco-black-light"
+        >
           <div className="max-w-7xl mx-auto">
             <div className="glassmorphism p-8 md:p-12 text-center">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
                 Be the First to Experience the Adventure
               </h2>
               <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-                Join our exclusive beta waitlist to get early access to the game, exclusive content,
-                and behind-the-scenes development updates directly in your inbox.
+                Join our exclusive beta waitlist to get early access to the
+                game, exclusive content, and behind-the-scenes development
+                updates directly in your inbox.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+              <div className="flex flex-col sm:flex-row gap-4 max-w-lg w-full mx-auto">
                 <Input
                   type="email"
                   placeholder="Your email address"
-                  className="bg-psyco-black-DEFAULT border-orange-500/50 flex-grow"
+                  className="bg-psyco-black-DEFAULT border-orange-500/50 flex-grow min-w-0"
                 />
-                <button className="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-6 rounded-lg transition-colors">
+                <button className="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-6 rounded-lg transition-colors whitespace-nowrap">
                   Join Beta
                 </button>
               </div>
