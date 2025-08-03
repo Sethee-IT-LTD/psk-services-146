@@ -25,7 +25,30 @@ const Navbar = () => {
     setIsOpen(false);
   }, [location.pathname]);
 
-  const navLinks = [{ name: "Home", path: "/" }];
+  const navLinks = [
+    {
+      name: "Discord",
+      path: "https://discord.gg/Ckd3rBn89s",
+      icon: (
+        <img
+          src="/discord.svg"
+          alt="Discord"
+          className="w-6 h-6 brightness-0 invert hover:brightness-100 hover:invert-0 transition-all"
+        />
+      ),
+    },
+    {
+      name: "X",
+      path: "https://x.com/elysium_descent",
+      icon: (
+        <img
+          src="/x.svg"
+          alt="X (Twitter)"
+          className="w-5 h-5 brightness-0 invert hover:brightness-100 hover:invert-0 transition-all"
+        />
+      ),
+    },
+  ];
 
   return (
     <nav
@@ -48,18 +71,15 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
-            <NavLink
+            <a
               key={link.path}
-              to={link.path}
-              className={({ isActive }) =>
-                cn(
-                  "text-white hover:text-orange-400 transition-colors duration-300 link-hover text-sm font-medium tracking-wide",
-                  isActive && "text-orange-500 after:w-full",
-                )
-              }
+              href={link.path}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-orange-400 transition-colors duration-300 link-hover text-sm font-medium tracking-wide"
             >
-              {link.name}
-            </NavLink>
+              {link.icon}
+            </a>
           ))}
         </div>
 
@@ -81,18 +101,18 @@ const Navbar = () => {
       >
         <div className="flex flex-col space-y-4">
           {navLinks.map((link) => (
-            <NavLink
+            <a
               key={link.path}
-              to={link.path}
-              className={({ isActive }) =>
-                cn(
-                  "text-white hover:text-orange-400 py-2 text-xl transition-colors duration-300",
-                  isActive && "text-orange-500",
-                )
-              }
+              href={link.path}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-orange-400 py-2 text-xl transition-colors duration-300"
             >
-              {link.name}
-            </NavLink>
+              <div className="flex items-center gap-2">
+                {link.icon}
+                <span>{link.name}</span>
+              </div>
+            </a>
           ))}
         </div>
       </div>
