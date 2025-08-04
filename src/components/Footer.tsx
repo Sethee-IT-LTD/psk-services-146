@@ -88,12 +88,12 @@ const Footer = () => {
             © {new Date().getFullYear()} Elysium Descent. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a
-              href="#"
+            <NavLink
+              to="/privacy-policy"
               className="text-gray-400 hover:text-orange-400 text-sm transition-colors"
             >
               Privacy Policy
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>
