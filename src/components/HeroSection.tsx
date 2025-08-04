@@ -31,7 +31,7 @@ const HeroSection = () => {
         <img
           src="/elysium-quest.gif"
           className="absolute inset-0 w-full h-full object-cover gif-reverse"
-          alt=""
+          alt="Elysium Descent gameplay showing epic 3D RPG adventure with dungeons and battles"
         />
       </div>
 
