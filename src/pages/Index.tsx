@@ -96,7 +96,7 @@ const Index = () => {
                   <Input
                     type="email"
                     placeholder="Your email address"
-                    className="bg-psyco-black-DEFAULT border-orange-500/50 flex-grow min-w-0 text-white placeholder-gray-400"
+                    className="bg-psyco-black-DEFAULT border-orange-500/50 flex-grow min-w-0 text-black placeholder-gray-400"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     disabled={isLoading}

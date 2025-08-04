@@ -32,19 +32,8 @@ export default async function handler(req, res) {
     const BREVO_API_KEY = process.env.BREVO_API_KEY;
     const BREVO_LIST_ID = process.env.BREVO_LIST_ID;
 
-    // Debug logging
-    console.log('Environment check:', {
-      hasApiKey: !!BREVO_API_KEY,
-      hasListId: !!BREVO_LIST_ID,
-      listId: BREVO_LIST_ID,
-      email: email
-    });
-
     if (!BREVO_API_KEY || !BREVO_LIST_ID) {
-      console.error("Missing Brevo configuration:", {
-        hasApiKey: !!BREVO_API_KEY,
-        hasListId: !!BREVO_LIST_ID
-      });
+      console.error("Missing Brevo configuration");
       return res.status(500).json({ message: "Server configuration error" });
     }
 
@@ -54,8 +43,6 @@ export default async function handler(req, res) {
       listIds: [Number(BREVO_LIST_ID)],
       updateEnabled: true,
     };
-
-    console.log('Sending to Brevo:', payload);
 
     // Call the Brevo API
     const brevoResponse = await fetch("https://api.brevo.com/v3/contacts", {
@@ -67,9 +54,6 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify(payload),
     });
-
-    console.log('Brevo response status:', brevoResponse.status);
-    console.log('Brevo response headers:', Object.fromEntries(brevoResponse.headers.entries()));
 
     // Handle empty responses properly
     let brevoData = {};
@@ -84,8 +68,6 @@ export default async function handler(req, res) {
       }
     }
 
-    console.log('Brevo response data:', brevoData);
-
     if (!brevoResponse.ok) {
       // If Brevo returns an error, forward it
       console.error("Brevo API error:", brevoData);
@@ -95,7 +77,6 @@ export default async function handler(req, res) {
     }
 
     // Success!
-    console.log('Successfully added email to Brevo:', email);
     return res.status(200).json({ message: "Success! You are on the list." });
   } catch (error) {
     console.error("Server error:", error);
